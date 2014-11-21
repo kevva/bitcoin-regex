@@ -1,0 +1,30 @@
+{
+  "name": "bitcoin-regex",
+  "version": "1.0.0",
+  "description": "Regular expression for matching Bitcoin addresses",
+  "license": "MIT",
+  "repository": "kevva/bitcoin-regex",
+  "author": {
+    "name": "Kevin Mårtensson",
+    "email": "kevinmartensson@gmail.com",
+    "url": "https://github.com/kevva"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "address",
+    "bitcoin",
+    "regex",
+    "string"
+  ],
+  "devDependencies": {
+    "ava": "^0.0.4"
+  }
+}
