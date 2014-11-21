@@ -7,5 +7,5 @@
  */
 
 module.exports = function () {
-	return /(?:^|\s)(?:[13][1-9A-Za-z][^O0Il]{24,32})/g;
+	return /(?:^|\s)?(?:[13][1-9A-Za-z][^O0Il]{24,32})/g;
 };
