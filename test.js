@@ -28,7 +28,11 @@ test('do not match bitcoin addresses', function (t) {
 	var fixtures = [
 		'2dice8EMZmqKvrGE4Qc9bUFf9PX3xaYDp',
 		'1dice8EMZmqKvrGE4Qc9bUFf9PX3xaYDpVasASdga',
-		'1dice8EMZmqKvrGE4Qc9bUFf9'
+		'1dice8EMZmqKvrGE4Qc9bUFf9',
+		'1FFirnLctcZxVx5otOnLNZ4dDGkMBM4vN',
+		'1FFirnLctcZxVx5ot0nLNZ4dDGkMBM4vN',
+		'1FFirnLctcZxVx5otInLNZ4dDGkMBM4vN',
+		'1FFirnLctcZxVx5otlnLNZ4dDGkMBM4vN'
 	];
 
 	fixtures.forEach(function (el) {
