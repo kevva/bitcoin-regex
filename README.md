@@ -13,13 +13,10 @@ $ npm install --save bitcoin-regex
 ```js
 var bitcoinRegex = require('bitcoin-regex');
 
-bitcoinRegex().test('1dice8EMZmqKvrGE4Qc9bUFf9PX3xaYDp');
+bitcoinRegex().test('1dice8EMZmqKvrGE4Qc9bUFf9PX3xaYDp foo bar');
 //=> true
 
-bitcoinRegex().exec('Bitcoin address: 1JeTiYgfVtpA3ygQTYFswkaoiH2VnFZJf9')[0].trim();
-//=> 1JeTiYgfVtpA3ygQTYFswkaoiH2VnFZJf9
-
-'Multiple 1dice8EMZmqKvrGE4Qc9bUFf9PX3xaYDp 1JeTiYgfVtpA3ygQTYFswkaoiH2VnFZJf9 addresses'.match(bitcoinRegex());
+'foo 1dice8EMZmqKvrGE4Qc9bUFf9PX3xaYDp bar 1JeTiYgfVtpA3ygQTYFswkaoiH2VnFZJf9'.match(bitcoinRegex());
 //=> ['1dice8EMZmqKvrGE4Qc9bUFf9PX3xaYDp', '1JeTiYgfVtpA3ygQTYFswkaoiH2VnFZJf9']
 ```
 
