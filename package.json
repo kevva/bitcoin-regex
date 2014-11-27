@@ -1,6 +1,6 @@
 {
   "name": "bitcoin-regex",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Regular expression for matching Bitcoin addresses",
   "license": "MIT",
   "repository": "kevva/bitcoin-regex",
