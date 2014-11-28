@@ -3,6 +3,7 @@
 /**
  * Regular expression for matching Bitcoin addresses
  *
+ * @param {Object} opts
  * @api public
  */
 
