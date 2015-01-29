@@ -1,4 +1,4 @@
-# bitcoin-regex [![Build Status](https://travis-ci.org/kevva/bitcoin-regex.svg?branch=master)](https://travis-ci.org/kevva/bitcoin-regex)
+# bitcoin-regex [![Build Status](http://img.shields.io/travis/kevva/bitcoin-regex.svg?style=flat)](https://travis-ci.org/kevva/bitcoin-regex)
 
 > Regular expression for matching Bitcoin addresses
 
