@@ -1,7 +1,7 @@
 'use strict';
 
-var bitcoinRegex = require('./');
 var test = require('ava');
+var bitcoinRegex = require('./');
 
 test('match bitcoin addresses', function (t) {
 	var fixtures = [

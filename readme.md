@@ -2,11 +2,13 @@
 
 > Regular expression for matching Bitcoin addresses
 
+
 ## Install
 
-```sh
+```
 $ npm install --save bitcoin-regex
 ```
+
 
 ## Usage
 
@@ -16,15 +18,31 @@ var bitcoinRegex = require('bitcoin-regex');
 bitcoinRegex().test('1dice8EMZmqKvrGE4Qc9bUFf9PX3xaYDp foo bar');
 //=> true
 
-bitcoinRegex({ exact: true }).test('1dice8EMZmqKvrGE4Qc9bUFf9PX3xaYDp foo bar');
+bitcoinRegex({exact: true}).test('1dice8EMZmqKvrGE4Qc9bUFf9PX3xaYDp foo bar');
 //=> false
 
-bitcoinRegex({ exact: true }).test('1dice8EMZmqKvrGE4Qc9bUFf9PX3xaYDp');
+bitcoinRegex({exact: true}).test('1dice8EMZmqKvrGE4Qc9bUFf9PX3xaYDp');
 //=> true
 
 'foo 1dice8EMZmqKvrGE4Qc9bUFf9PX3xaYDp bar 1JeTiYgfVtpA3ygQTYFswkaoiH2VnFZJf9'.match(bitcoinRegex());
 //=> ['1dice8EMZmqKvrGE4Qc9bUFf9PX3xaYDp', '1JeTiYgfVtpA3ygQTYFswkaoiH2VnFZJf9']
 ```
+
+
+## API
+
+### bitcoinRegex(options)
+
+Returns a regex for matching Bitcoin addresses.
+
+#### options.exact
+
+Type: `boolean`  
+Default: `false` *(Matches any Bitcoin address in a string)*
+
+Only match an exact string.  
+Useful with `RegExp#test` to check if a string is a Bitcoin address.
+
 
 ## License
 
