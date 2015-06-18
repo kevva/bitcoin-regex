@@ -5,5 +5,5 @@ module.exports = function (opts) {
 	var regex = '(?:[13][1-9A-Za-z][^O0Il]{24,32})';
 
 	return opts.exact ? new RegExp('(?:^' + regex + '$)') :
-						new RegExp('(?:^|\\s)?' + regex, 'g');
+						new RegExp(regex, 'g');
 };

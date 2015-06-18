@@ -1,5 +1,4 @@
 'use strict';
-
 var test = require('ava');
 var bitcoinRegex = require('./');
 
@@ -13,12 +12,7 @@ test('match bitcoin addresses', function (t) {
 	];
 
 	fixtures.forEach(function (el) {
-		if (!bitcoinRegex().exec(el)) {
-			t.assert(false, el);
-			return;
-		}
-
-		t.assert(bitcoinRegex().exec(el)[0] === el, el);
+		t.assert(bitcoinRegex({exact: true}).test(el));
 	});
 
 	t.end();
@@ -36,12 +30,7 @@ test('do not match bitcoin addresses', function (t) {
 	];
 
 	fixtures.forEach(function (el) {
-		if (!bitcoinRegex().exec(el)) {
-			t.assert(true);
-			return;
-		}
-
-		t.assert(bitcoinRegex().exec(el)[0] !== el, el);
+		t.assert(!bitcoinRegex({exact: true}).test(el));
 	});
 
 	t.end();
