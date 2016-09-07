@@ -16,7 +16,7 @@ test('match bitcoin addresses', t => {
 });
 
 test('don\'t match bitcoin addresses', t => {
-	var fixtures = [
+	const fixtures = [
 		'2dice8EMZmqKvrGE4Qc9bUFf9PX3xaYDp',
 		'1dice8EMZmqKvrGE4Qc9bUFf9PX3xaYDpVasASdga',
 		'1dice8EMZmqKvrGE4Qc9bUFf9',
