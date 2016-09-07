@@ -1,9 +1,8 @@
-'use strict';
-var test = require('ava');
-var bitcoinRegex = require('./');
+import test from 'ava';
+import bitcoinRegex from './';
 
-test('match bitcoin addresses', function (t) {
-	var fixtures = [
+test('match bitcoin addresses', t => {
+	const fixtures = [
 		'1dice8EMZmqKvrGE4Qc9bUFf9PX3xaYDp',
 		'1JeTiYgfVtpA3ygQTYFswkaoiH2VnFZJf9',
 		'1Ak6rNZYm5tNtDVJRt93Cax17TBih6pM7Y',
@@ -11,14 +10,12 @@ test('match bitcoin addresses', function (t) {
 		'1FFirnLctcZxVx5otnLNZ4dDGUkMBM4vNr'
 	];
 
-	fixtures.forEach(function (el) {
-		t.assert(bitcoinRegex({exact: true}).test(el));
-	});
-
-	t.end();
+	for (const x of fixtures) {
+		t.true(bitcoinRegex({exact: true}).test(x));
+	}
 });
 
-test('do not match bitcoin addresses', function (t) {
+test('don\'t match bitcoin addresses', t => {
 	var fixtures = [
 		'2dice8EMZmqKvrGE4Qc9bUFf9PX3xaYDp',
 		'1dice8EMZmqKvrGE4Qc9bUFf9PX3xaYDpVasASdga',
@@ -29,9 +26,7 @@ test('do not match bitcoin addresses', function (t) {
 		'1FFirnLctcZxVx5otlnLNZ4dDGkMBM4vN'
 	];
 
-	fixtures.forEach(function (el) {
-		t.assert(!bitcoinRegex({exact: true}).test(el));
-	});
-
-	t.end();
+	for (const x of fixtures) {
+		t.false(bitcoinRegex({exact: true}).test(x));
+	}
 });
